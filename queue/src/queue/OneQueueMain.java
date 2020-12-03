@@ -1,5 +1,7 @@
 package queue;
 
+import java.util.ArrayDeque;
+
 /**
  * 单向队列实例
  */
@@ -12,6 +14,10 @@ public class OneQueueMain {
         //oneQueue.push(20);
         System.out.println(oneQueue.pop());
         System.out.println(oneQueue.find());
+        System.out.println(oneQueue.find());
+        oneQueue.remove();
+        oneQueue.push(20);
+        System.out.println(oneQueue.pop());
         System.out.println(oneQueue.find());
     }
 }
@@ -100,6 +106,16 @@ class OneQueue{
             return null;
         }else{
             return array[front];
+        }
+    }
+
+    //移除数据
+    public void remove(){
+        if(isEmpty()){
+            System.out.println("当前为空队列");
+        }else{
+            array[front--]=null;
+            length--;
         }
     }
 }
