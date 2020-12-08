@@ -7,6 +7,7 @@ public class DoubleWayLinkedMain {
     public static void main(String[] args) {
         DoubleWayLinked linked=new DoubleWayLinked();
         linked.addHead("B");
+        linked.forEach();
         linked.addHead("A");
         linked.forEach();
         linked.addTail("C");
@@ -136,6 +137,9 @@ class DoubleWayLinked{
             if (current == head) {
                 //第一个元素
                 System.out.print("[" + current.data + "->");
+                if(size==1){
+                    System.out.print("]");
+                }
             } else if (current.next == null) {
                 //最后一个元素
                 System.out.print(current.data + "]");
