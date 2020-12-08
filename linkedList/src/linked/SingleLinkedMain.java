@@ -138,7 +138,7 @@ class MySingleLinked{
         //标注上一个节点对象
         Node upCurrent=head;
         while (!data.equals(current.data)){
-            if(current==null){
+            if(current.next==null){
                 //最后一个元素了
                 return false;
             }
