@@ -7,7 +7,40 @@ import java.util.Arrays;
  */
 public class Two34TreeMain {
     public static void main(String[] args) {
+        MyTwo34Tree tree=new MyTwo34Tree();
 
+    }
+}
+
+/**
+ * 234树实现类
+ */
+class MyTwo34Tree{
+    // 根节点
+    private Node root;
+
+    //查找节点
+    public Node find(int data){
+        Node currentNode=root;
+        while (true){
+            if(currentNode.getDataItemIndex(data)==-1){
+                //当前节点没有找到数据
+                if(currentNode.isLeafChild()){
+                    //当前节点为叶节点
+                    return null;
+                }else{
+                    //不是叶节点
+                    for (int i = 0; i < 3; i++) {
+                        if(currentNode.getDataItems()[i].getData()>data){
+                            currentNode=currentNode.getChildNodes()[i];
+                        }
+                    }
+                    currentNode=currentNode.getChildNodes()[3];
+                }
+            }else{
+                return currentNode;
+            }
+        }
     }
 }
 
