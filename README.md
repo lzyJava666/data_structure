@@ -43,3 +43,7 @@
   ### BinaryTree.BinaryTreeMain ： 二叉树实例
   ### rbtree.RBTreeMain ： 红黑树实例
   ### tow34tree.Two34TreeMain：234树实例
+  
+## hash : 哈希表实例集
+   ### hash.linear.LinearHashMain:基于线性探测的哈希表
+   ### hash.hashdouble.HashDoubleMain:基于再哈希法的哈希表
