@@ -5,7 +5,7 @@ package hashdouble;
  */
 public class HashDoubleMain {
     public static void main(String[] args) {
-        MyHashDouble hash=new MyHashDouble(5);
+        MyHashDouble hash=new MyHashDouble();
         hash.insert(5);
         hash.insert(19);
         hash.forEach();
